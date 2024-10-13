@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live TV | Sports</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="https://cricstreamz.github.io/sports/">
+            <p>Wait 30 Seconds to load the Channels</p>
+        </a>
+    </div>
 
+    <div class="container">
+        <!-- Iframe Container -->
+        <div class="iframe-container">
+            <iframe id="match-iframe" src="https://en.247stream.one/channel.php?play=65" scrolling="no" allow="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+        </div>
+
+        <!-- Iframe Source Links -->
+        <div id="iframe-links">
+            <button class="iframe-btn" onclick="changeIframeSource('https://me.webcric.com/frame2.htm')">SonyLiv</button>
+            <button class="iframe-btn" onclick="changeIframeSource('https://tapmadtv.live/play.php?c=ptvpk')">TNT Sports</button>
+            <button class="iframe-btn" onclick="changeIframeSource('https://en.247stream.one/channel.php?play=65')">FC Worldwide</button>
+            <button class="iframe-btn" onclick="changeIframeSource('https://me.webcric.com/frame2.htm')">SERVER 4</button>
+            
+            <button class="iframe-btn" onclick="changeIframeSource('https://bdixtv247.techpriyo.com/tpl/playid.php?id=TNT_1_GB')">SERVER 5</button>
+        </div>
+    </div>
+
+    <!-- Add Telegram and Download Buttons at the very bottom -->
+    <div class="bottom-container">
+        <a href="https://t.me/Anasm3u8link" class="telegram-btn">Join Telegram</a>
+        <a href="https://downloadurl.com/someapp" class="download-btn">Download the App</a>
+    </div>
+
+    <script>
+        // Function to change the iframe source
+        function changeIframeSource(url) {
+            document.getElementById('match-iframe').src = url;
+        }
+
+        // Current time display
+        function updateCurrentTime() {
+            const now = new Date();
+            const currentTime = now.toLocaleTimeString();
+            document.getElementById('current-time').textContent = Current Time: ${currentTime};
+        }
+        setInterval(updateCurrentTime, 1000);
+    </script>
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
+</body>
+</html>
